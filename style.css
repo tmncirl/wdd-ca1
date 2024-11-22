@@ -1,0 +1,18 @@
+/* About me, done by Alex Daly */
+
+div.ABDescCon {
+	background-color: blue;
+	text-align: center;
+	padding: 2%;
+}
+
+div.ABDesc {
+	padding: 1%;
+	background-color: green;
+	border: ridge #000000 3px;
+}
+
+div.slippy {
+	background-color: black;
+}
+
