@@ -1,7 +1,15 @@
+/* Colour variables in root selector, allows for easy changing of the websites colours on all pages */
+
+:root {
+	--Primary: #820263; /* Byzantium */
+	--Secondary: #D90368; /* Dogwood Rose */
+	--Accent: #FFD400; /* Gold */
+}
+
 /* About me, done by Alex Daly */
 
 div.ABDescCon {
-	background-color: blue;
+	background-color: var(--Primary);
 	text-align: center;
 	padding: 2%;
 }
