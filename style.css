@@ -1,26 +1,31 @@
 /* Colour variables in root selector, allows for easy changing of the websites colours on all pages */
 
 :root {
-	--Primary: #820263; /* Byzantium */
-	--Secondary: #D90368; /* Dogwood Rose */
-	--Accent: #FFD400; /* Gold */
+	--primary: #820263; /* Byzantium */
+	--secondary: #D90368; /* Dogwood Rose */
+	--accent: #FFD400; /* Gold */
 }
 
 /* About me, done by Alex Daly */
 
-div.ABDescCon {
-	background-color: var(--Primary);
+.ABbody {
+	background-color: var(--primary);
+}
+
+
+.ABDescCon {
+	background-color: var(--primary);
 	text-align: center;
 	padding: 2%;
 }
 
-div.ABDesc {
+.ABDesc {
 	padding: 1%;
-	background-color: green;
+	background-color: var(--secondary);
 	border: ridge #000000 3px;
 }
 
-div.slippy {
+.slippy {
 	background-color: black;
 }
 
