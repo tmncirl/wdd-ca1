@@ -6,6 +6,16 @@
 	--accent: #FFD400; /* Gold */
 }
 
+/* Navbar CSS */
+
+.navbarCustom {
+	background-color: var(--secondary);
+}
+
+#logo {
+	
+}
+
 /* About me, done by Alex Daly */
 
 .ABbody {
