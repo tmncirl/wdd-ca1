@@ -16,22 +16,21 @@
 	
 }
 
-/* About me, done by Alex Daly */
+/* Consequences page, done by Alex Daly */
 
-.ABbody {
+.cq-body {
 	background-color: var(--primary);
 }
 
-
-.ABDescCon {
+.cq-desc {
 	background-color: var(--primary);
 	text-align: center;
 	padding: 2%;
-}
-
-.ABDesc {
 	padding: 1%;
 	background-color: var(--secondary);
 	border: ridge #000000 3px;
 }
 
+.cq-pic {
+	margin: 2% 0%;
+}
