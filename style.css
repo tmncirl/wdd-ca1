@@ -18,19 +18,72 @@
 
 /* Consequences page, done by Alex Daly */
 
-.cq-body {
-	background-color: var(--primary);
+
+/* CSS for desktops (768px and up), size ranges gotten from W3Schools https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+@media only screen and (min-width: 1010px) {
+	
+	.cq-body {
+		background-color: var(--primary);
+	}
+
+	.cq-desc {
+		text-align: center;
+		padding: 2%;
+		background-color: var(--secondary);
+		border: ridge #000000 3px;
+		margin: 0;
+	}
+
+	.cq-pic {
+		margin: -0.5% 0%;
+		position: relative;
+		right: 0%;
+		width: 40%;
+	}
+	
+	#cq-pic {
+		border: double var(--accent) 3px;		
+	}
+	
+	.cq-form {
+		background-color: var(--secondary);
+		padding: 1.5%;
+	}
+	
+	.cq-formHeader {
+		border: 5px black;
+		border-style: double groove groove double;
+	}
 }
 
-.cq-desc {
-	background-color: var(--primary);
-	text-align: center;
-	padding: 2%;
-	padding: 1%;
-	background-color: var(--secondary);
-	border: ridge #000000 3px;
+@media only screen and (min-width: 1214px) {
+	.cq-pic {
+		width: 40%;
+	}
+	
+	#cq-pic {
+		width: 100%;
+		height: 95%;
+	}
 }
 
-.cq-pic {
-	margin: 2% 0%;
+/* CSS for mobile (768px and down) */
+@media only screen and (max-width: 1010px) {
+	.cq-body {
+		background-color: var(--primary);
+	}
+	
+	.cq-desc {
+		background-color: var(--primary);
+		text-align: center;
+		padding: 2%;
+		background-color: var(--secondary);
+		border: ridge #000000 3px;
+		width: 176%;
+	}
+	
+	.cq-pic {
+		display: none;
+	}
+	
 }
