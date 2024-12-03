@@ -47,12 +47,15 @@ table {
 	border-spacing: 0;
 }
 
+/* end of reset */
+
 /* Colour variables in root selector, allows for easy changing of the websites colours on all pages */
 
 :root {
 	--primary: #820263; /* Byzantium */
 	--secondary: #D90368; /* Dogwood Rose */
-	--accent: #FFD400; /* Gold */
+	--accent: #5B92E5 ; /* Gold */
+	--background-primary-color: #EEEEEE;
 }
 
 /* Navbar CSS */
@@ -135,4 +138,64 @@ table {
 		display: none;
 	}
 	
+}
+
+/* What can we do about it? */
+:root {
+	--small-rounded-corners: 0.5rem;
+	--small-gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+	.navbar {
+		margin: 0 !important;
+		background-color: transparent !important;
+		border-radius: 0;
+	}
+}	
+
+.navbar {
+	margin: var(--small-gap);
+	box-sizing: border-box;
+	background-color: #DDDDDD;
+	border-radius: var(--small-rounded-corners);
+}
+
+.nav-item {
+	padding-right: 1rem;
+}
+
+.nav-link {
+	font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	padding: 1rem;
+}
+
+.nav-link.active {
+	background-color: var(--accent);
+	color: var(--background-primary-color) !important;
+	border-radius: var(--small-rounded-corners);
+}
+
+.divider {
+	width: 100%;
+	height: 1px;
+	background-color: var(--accent);
+	margin: 1rem 0;
+}
+
+.image-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1rem;
+}
+
+.image-grid .grid-item {
+	aspect-ratio: 3/2;
+}
+
+.image-grid .grid-item img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: var(--small-rounded-corners);
 }
