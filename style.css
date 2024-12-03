@@ -148,6 +148,10 @@ table {
 
 /* End of consequences CSS */
 
+/* ------ */
+/* Thomas */
+/* ------ */
+
 /* What can we do about it? */
 :root {
 	--small-rounded-corners: 0.5rem;
@@ -164,6 +168,15 @@ table {
 		margin: 0 !important;
 		background-color: transparent !important;
 		border-radius: 0;
+	}
+
+	#nav {
+		background-color: #DDDDDD;
+		border-radius: var(--small-rounded-corners);
+	}
+
+	.nav-item {
+		padding-right: 0 !important;
 	}
 }	
 
