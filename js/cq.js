@@ -1,5 +1,5 @@
 
-
+// Function for validating form responses and saying which fields are invalid.
 function validateFunc() {
 	
 	// Setting up variables to use later, returnFeed will be used to return feedback and info to user. Valid will determine whether feedback is required.
@@ -46,3 +46,16 @@ function validateFunc() {
 		messageFeed += "Price Estimate/Wish";
 	}
 }
+
+// Functions for showing or hiding the effects of climate change, it can hide or show any variable as ID is passed onto it.
+
+function displayToggle(inputID) {
+	var showHide = document.getElementById(inputID)
+	// If element is not displayed, display. Otherwise, set to not display.
+	if (showHide.style.display == "inline") {
+		showHide.style.display="none";
+	} else {
+		showHide.style.display="inline";
+	}
+}
+

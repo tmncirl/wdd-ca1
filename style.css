@@ -62,39 +62,10 @@ table {
 	--body-fonts: 'Merriweather', Arial, Helvetica, sans-serif;
 }
 
-/* Navbar CSS */
-
-.navbarCustom {
-	background-color: var(--secondary);
-}
-
-#logo {
-	
-}
-
 /* Consequences page, done by Alex Daly */
 
 /* CSS for desktops (768px and up), size ranges gotten from W3Schools https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 @media only screen and (min-width: 1010px) {
-	
-	.cq-body {
-		background-color: var(--primary);
-	}
-
-	.cq-desc {
-		text-align: center;
-		padding: 2%;
-		background-color: var(--secondary);
-		border: ridge #000000 3px;
-		margin: 0;
-	}
-	
-	.cq-desc > h1 {
-		font-size: 300%;
-		font-variant: small-caps;
-		border-radius: 1%;
-		background-color: var(--accent);
-	}
 
 	.cq-pic {
 		position: relative;
@@ -106,16 +77,7 @@ table {
 		border: solid white 0.5px;
 		border-radius: 3.5%;		
 	}
-	
-	.cq-form {
-		background-color: var(--secondary);
-		padding: 1.5%;
-	}
-	
-	.cq-formHeader {
-		border: 5px black;
-		border-style: double groove groove double;
-	}
+
 }
 
 @media only screen and (min-width: 1214px) {
@@ -131,16 +93,8 @@ table {
 
 /* CSS for mobile (768px and down) */
 @media only screen and (max-width: 1010px) {
-	.cq-body {
-		background-color: var(--primary);
-	}
-	
+
 	.cq-desc {
-		background-color: var(--primary);
-		text-align: center;
-		padding: 2%;
-		background-color: var(--secondary);
-		border: ridge #000000 3px;
 		width: 176%;
 	}
 	
@@ -149,6 +103,60 @@ table {
 	}
 	
 }
+
+.cq-body {
+	background-color: var(--primary);
+}
+
+.cq-desc {
+	text-align: center;
+	padding: 2%;
+	background-color: var(--secondary);
+	border: ridge #000000 3px;
+	margin: 0;
+}
+	
+.cq-desc > h1 {
+	font-size: 300%;
+	font-variant: small-caps;
+	border-radius: 1%;
+	width: 99%;
+}
+
+.cq-desc > p {
+	font-size: 125%;
+}
+
+.cq-list {
+	background-color: var(--secondary);
+	border: 1px solid black;
+	padding: 1%;
+}
+
+.cq-list > h2 {
+	font-size: 200%;
+}
+
+.cq-list > ul{
+	list-style: inside;
+}
+
+#cq-food, #cq-water {
+	display: none;
+	position: relative;
+	right: -1%;
+}
+
+.cq-form {
+	background-color: var(--secondary);
+	padding: 1.5%;
+}
+	
+.cq-formHeader {
+	border: 5px black;
+	border-style: double groove groove double;
+}
+
 
 /* End of consequences CSS */
 
