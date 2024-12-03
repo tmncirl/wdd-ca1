@@ -241,3 +241,27 @@ table {
 	height: 100%;
 	border-radius: var(--small-rounded-corners);
 }
+
+.page-content {
+	padding: 1rem;
+}
+
+.page-content > * {
+	font-size: 1.2rem;
+}
+
+.page-content h2 {
+	font-size: 2rem;
+	font-family: var(--heading-fonts);
+	padding-top: var(--small-gap);
+}
+
+.page-content ul {
+	list-style: disc;
+	padding-left: 2.5rem;
+	box-sizing: border-box;
+}
+
+.page-content ul li {
+	margin-bottom: var(--small-gap);
+}
