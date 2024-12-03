@@ -21,7 +21,7 @@
 	<body>
 		<!-- Main container and row, col boostrap divs to organise page easily and beautifully --!>
 		<div class="container-fluid cq-body">
-			<nav class="navbar navbar-expand-lg navbarCustom"> <!-- Navbar taken from bootstrap https://getbootstrap.com/docs/4.0/components/navbar/--!>
+			<nav class="navbar navbar-expand-lg navbarCustom"> <!-- Navbar taken from bootstrap, and adapated. https://getbootstrap.com/docs/4.0/components/navbar/ -->
 				<div class="container-fluid">
 					<a class="navbar-brand" href="index.html">
 						<img src="img/logo.png" alt="UN Logo" id="logo">
@@ -40,7 +40,7 @@
 								<a class="nav-link" href="causes.html">Causes of Climate Change</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link active" href="about.html">Consequences</a>
+								<a class="nav-link active" href="consequences.html">Consequences</a>
 							</li>
 							<li>
 								<a class="nav-link" href="cccp.html">Current Climate Change Preventions</a>
@@ -75,65 +75,72 @@
 				</div>
 			</div> <br>
 			
-			<div class="col-12 cq-list">
-				<h2>Effects of Climate Change</h2>
-				<p>Click on the buttons to see how climate change will effect these areas!</p>
-				<br>
-				<ul>
-					<!-- Display toggle can hide or show any element, reducing code. List of  -->
-					<button id="cq-listBut" onclick="displayToggle('cq-food')"><li> Food</li></button>
-					<p id="cq-food"><br><br>Heat, droughts and extreme weather will make farming much harder in most of the world. Crops that are suitable for growing in certain areas will have to move to stay in the same climates.</p><br><br>
-					
-					<button id="cq-listBut" onclick="displayToggle('cq-water')"><li> Water</li></button>
-					<p id="cq-water"><br><br>gf</p><br><br>
-					
-					<button id="cq-listBut" onclick="displayToggle('cq-env')"><li> The environment</li></button>
-					<p id="cq-env"><br><br>gsdg</p><br><br>
-					
-					<button id="cq-listBut" onclick="displayToggle('cq-health')"><li> Human Health</li></button>
-					<p id="cq-health"><br><br>grhewnbeb</p><br><br>
-					
-					<button id="cq-listBut" onclick="displayToggle('cq-biodiv')"><li> Bio Diversity</li></button>
-					<p id="cq-biodiv"><br><br>rher</p><br><br>
-				</ul>
+			<div class="row">
+				<div class="col-12 cq-list">
+					<h2>Effects of Climate Change</h2>
+					<p>Click on the buttons to see how climate change will effect these areas!</p>
+					<br>
+					<ul>
+						<!-- Display toggle can hide or show any element, reducing code. List of  -->
+						<button id="cq-listBut" onclick="displayToggle('cq-food')"><li> Food</li></button>
+						<p id="cq-food"><br><br>Heat, droughts and extreme weather will make farming much harder in most of the world. Crops that are suitable for growing in certain areas will have to move to stay in the same climates.</p><br><br>
+						
+						<button id="cq-listBut" onclick="displayToggle('cq-water')"><li> Water</li></button>
+						<p id="cq-water"><br><br>gf</p><br><br>
+						
+						<button id="cq-listBut" onclick="displayToggle('cq-env')"><li> The environment</li></button>
+						<p id="cq-env"><br><br>gsdg</p><br><br>
+						
+						<button id="cq-listBut" onclick="displayToggle('cq-health')"><li> Human Health</li></button>
+						<p id="cq-health"><br><br>grhewnbeb</p><br><br>
+						
+						<button id="cq-listBut" onclick="displayToggle('cq-biodiv')"><li> Bio Diversity</li></button>
+						<p id="cq-biodiv"><br><br>rher</p><br><br>
+					</ul>
+				</div>
 			</div>
 			<br>
-			<div class="col-12 cq-form">
+			<div class="row">
+				<div class="col-12 cq-form">
 
-				<form class="cq-form">
-				
-					<!-- Form, with fields for each input and a small explanation of the form at the top under cq-formHeader -->
-					<span class="cq-formHeader">
-					<h3>Climate Crisis Compensation Request</h3>
-					<p>Have you or a loved one been affected by climate change?<br> Please fill out the form below! You might be liable for damages!</p></span>
-					<br>
-					<label for="cq-climateCrisis">Please describe the crisis you endured.</label><br>
-					<textarea id="cq-climateCrisis" name="cq-climateCrisis" rows="2" cols="35"></textarea>
-					<br><br>
+					<form class="cq-form">
 					
-					<label for="cq-priceEst">How much would you like to recieve from this claim?</label> <br>
-					<input type="text" id="cq-priceEst" name="cq-priceEst"></input>
-					<br><br>
-					
-					<label for="cq-email">Please enter your email.</label><br>
-					<input type="text" name="cq-email" id="cq-email"></input>
-					<br><br>
-					
-					<label for="cq-tele">Please enter your phone number.</label><br>
-					<input type="text" name="cq-tele" id="cq-tele"></input>
-					
-					
-					<br><br>
-					<button id="submit" onclick="validateFunc()">Submit</button>
-					<br><br>
-					
-					<p id="validateFeedback"></p>
-				</form>
+						<!-- Form, with fields for each input and a small explanation of the form at the top under cq-formHeader -->
+						<span class="cq-formHeader">
+						<h3>Climate Crisis Compensation Request</h3>
+						<p>Have you or a loved one been affected by climate change?<br> Please fill out the form below! You might be liable for damages!</p></span>
+						<br>
+						<label for="cq-climateCrisis">Please describe the crisis you endured.</label><br>
+						<textarea id="cq-climateCrisis" name="cq-climateCrisis" rows="2" cols="35"></textarea>
+						<br><br>
+						
+						<label for="cq-priceEst">How much would you like to recieve from this claim?</label> <br>
+						<input type="text" id="cq-priceEst" name="cq-priceEst"></input>
+						<br><br>
+						
+						<label for="cq-email">Please enter your email.</label><br>
+						<input type="text" name="cq-email" id="cq-email"></input>
+						<br><br>
+						
+						<label for="cq-tele">Please enter your phone number.</label><br>
+						<input type="text" name="cq-tele" id="cq-tele"></input>
+						
+						
+						<br><br>
+						<button id="submit" onclick="validateFunc()">Submit</button>
+						<br><br>
+						
+						<p id="validateFeedback"></p>
+					</form>
+				</div>
 			</div>
-			<div class="col-12">
+			<div class="row">
+				<div class="col-12">
+				</div>
 			</div>
 		</div>
 		
+		<!-- Link to bootstrap javascript -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 	</body>
 </html>

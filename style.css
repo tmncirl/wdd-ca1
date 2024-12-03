@@ -131,6 +131,8 @@ table {
 	border: 1px solid black;
 	padding: 1%;
 	border-radius: 0.5% / 2.5%;
+	margin: 0.5%;
+	width: 99%;
 }
 
 .cq-list > h2 {
@@ -164,6 +166,8 @@ table {
 div.cq-form {
 	background-color: var(--secondary);
 	padding: 1.5%;
+	margin: 0 0.5%;
+	width: 99%;
 }
 
 .cq-formHeader > h3 {
@@ -186,6 +190,16 @@ form.cq-form > input {
 
 
 /* End of consequences CSS */
+
+/* Current Climate Change Prevention Page by Alex Daly */
+
+.ccp-grid {
+	display: grid;
+	
+}
+
+
+/* End of Current Climate Change Prevention Page */
 
 /* ------ */
 /* Thomas */
