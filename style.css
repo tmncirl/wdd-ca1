@@ -70,7 +70,6 @@ table {
 
 /* Consequences page, done by Alex Daly */
 
-
 /* CSS for desktops (768px and up), size ranges gotten from W3Schools https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
 @media only screen and (min-width: 1010px) {
 	
@@ -85,16 +84,23 @@ table {
 		border: ridge #000000 3px;
 		margin: 0;
 	}
+	
+	.cq-desc > h1 {
+		font-size: 300%;
+		font-variant: small-caps;
+		border-radius: 1%;
+		background-color: var(--accent);
+	}
 
 	.cq-pic {
-		margin: -0.5% 0%;
 		position: relative;
 		right: 0%;
 		width: 40%;
 	}
 	
 	#cq-pic {
-		border: double var(--accent) 3px;		
+		border: solid white 0.5px;
+		border-radius: 3.5%;		
 	}
 	
 	.cq-form {
@@ -139,6 +145,8 @@ table {
 	}
 	
 }
+
+/* End of consequences CSS */
 
 /* What can we do about it? */
 :root {
