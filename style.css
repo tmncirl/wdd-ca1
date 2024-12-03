@@ -20,7 +20,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font-family: var(--body-fonts);
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -56,6 +56,10 @@ table {
 	--secondary: #D90368; /* Dogwood Rose */
 	--accent: #5B92E5 ; /* Gold */
 	--background-primary-color: #EEEEEE;
+
+	/* Fallback fonts after google font if it doesn't load */
+	--heading-fonts: 'Work Sans', 'Roboto', sans-serif;
+	--body-fonts: 'Merriweather', Arial, Helvetica, sans-serif;
 }
 
 /* Navbar CSS */
@@ -161,7 +165,7 @@ table {
 
 @media only screen and (max-width: 768px) {
 	:root {
-		--image-grid-gap: 0.5rem;
+		--image-grid-gap: 0.75rem;
 	}
 	
 	.navbar {
@@ -192,7 +196,7 @@ table {
 }
 
 .nav-link {
-	font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Work Sans', sans-serif;
 	padding: 1rem;
 }
 
@@ -211,6 +215,14 @@ table {
 
 .page-title {
 	font-size: 3rem;
+	font-family: var(--heading-fonts);
+	font-weight: bold;
+	padding: var(--small-gap) 0;
+}
+
+.page-description {
+	font-size: 1.5rem;
+	padding-bottom: var(--small-gap);
 }
 
 .image-grid {
