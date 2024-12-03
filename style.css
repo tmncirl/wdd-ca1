@@ -144,9 +144,14 @@ table {
 :root {
 	--small-rounded-corners: 0.5rem;
 	--small-gap: 0.5rem;
+	--image-grid-gap: 1rem;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+	:root {
+		--image-grid-gap: 0.5rem;
+	}
+	
 	.navbar {
 		margin: 0 !important;
 		background-color: transparent !important;
@@ -180,13 +185,17 @@ table {
 	width: 100%;
 	height: 1px;
 	background-color: var(--accent);
-	margin: 1rem 0;
+	margin: 0.5rem 0;
+}
+
+.page-title {
+	font-size: 3rem;
 }
 
 .image-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	grid-gap: 1rem;
+	grid-gap: var(--image-grid-gap);
 }
 
 .image-grid .grid-item {
