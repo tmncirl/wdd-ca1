@@ -68,9 +68,7 @@ table {
 @media only screen and (min-width: 1010px) {
 
 	.cq-pic {
-		position: relative;
-		right: 0%;
-		width: 40%;
+		max-width: 40%;
 	}
 	
 	#cq-pic {
@@ -80,28 +78,29 @@ table {
 
 }
 
-@media only screen and (min-width: 1214px) {
-	.cq-pic {
-		width: 40%;
-	}
-	
-	#cq-pic {
-		width: 100%;
-		height: 95%;
-	}
-}
-
-/* CSS for mobile (768px and down) */
-@media only screen and (max-width: 1010px) {
-
-	.cq-desc {
-		width: 176%;
-	}
-	
+/* Have to cut off image at 1024px as it does not look good when smaller */
+@media only screen and (max-width: 1024px) {
 	.cq-pic {
 		display: none;
 	}
 	
+	.cq-desc {
+		width: 176%;
+	}
+}
+
+/* CSS for mobile (768px and down) */
+@media only screen and (max-width: 768px) {
+
+	.cq-desc > p {
+		font-size: 100%;
+	}
+	
+}
+
+#cq-pic {
+	width: 100%;
+	height: auto;
 }
 
 .cq-body {
@@ -124,13 +123,14 @@ table {
 }
 
 .cq-desc > p {
-	font-size: 125%;
+	font-size: 100%;
 }
 
 .cq-list {
 	background-color: var(--secondary);
 	border: 1px solid black;
 	padding: 1%;
+	border-radius: 0.5% / 2.5%;
 }
 
 .cq-list > h2 {
@@ -143,26 +143,45 @@ table {
 
 #cq-listBut {
 	color: white;
-	background-color: black;
+	background-color: #bfbfbf;
 	padding: 0.5%;
 	font-size: 120%;
-	list-style: none;
+	list-style-type: "˅";
+	border: double white 3px;
+	border-radius: 20px / 50%;
+}
+
+#cq-listBut:hover {
+	transform: scale(1.08);
 }
 
 #cq-food, #cq-water, #cq-health, #cq-env, #cq-biodiv {
 	display: none;
 	position: relative;
-	right: -1%;
+	left: 1%;
 }
 
-.cq-form {
+div.cq-form {
 	background-color: var(--secondary);
 	padding: 1.5%;
 }
+
+.cq-formHeader > h3 {
+	font-size: 200%;
+}
 	
-.cq-formHeader {
-	border: 5px black;
-	border-style: double groove groove double;
+.cq-formHeader > p {
+	position: relative;
+	left: 0.5%;	
+}
+
+form.cq-form > label {
+	font-size: 110%;
+	padding: 0.7% 0 0.2% 0;
+}
+
+form.cq-form > input {
+	width: 350px;
 }
 
 
