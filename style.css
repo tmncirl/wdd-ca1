@@ -188,14 +188,15 @@ form.cq-form > input {
 	.cq-desc > p {
 		font-size: 150%;
 	}
+	
+	#cq-listBut {
+		padding: 1.2%;
+	}
 }
 
 /* CSS for mobile (768px and down) */
 @media only screen and (max-width: 768px) {
 
-	.cq-desc > p {
-		font-size: 100%;
-	}
 	
 }
 
