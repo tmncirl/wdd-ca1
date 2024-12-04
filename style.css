@@ -197,7 +197,16 @@ form.cq-form > input {
 
 /* Current Climate Change Prevention Page by Alex Daly */
 
-/* CSS for mobile (768px and down) */
+.ccp-header {
+	font-size: 200%;
+	text-align: center;
+	float: right;
+	width: 30%;
+	margin: 0.5% 0 1% 0;
+	padding: 1% 0;
+	border: ridge 2px black;
+	
+}
 	
 .ccp-imgGrid {
 	text-align: center;
@@ -247,20 +256,9 @@ form.cq-form > input {
 	.ccp-imgGrid > h2 {
 		font-size: 160%;
 	}
-	
-	.ccp-desc {
-		width: 150;
-	}
 }
 
-@media only screen and (max-width: 850px) {
-	.ccp-desc {
-		width: 120%;
-		position: relative;
-		right: 100%;
-	}
-	
-}
+
 
 
 /* End of Current Climate Change Prevention Page */
