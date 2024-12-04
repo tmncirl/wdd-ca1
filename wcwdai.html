@@ -49,11 +49,85 @@
             </div>
         </div>
 		<div class="divider"></div>
-		<div class="container-fluid">
+		<div class="container-fluid main-content">
 			<div class="row">
 				<div class="col-md-6">
 					<h1 class="page-title">What can we do about it?</h1>
 					<p class="page-description">Climate change is an issue that affects us all, but what can we do about it?</p>
+					<form class="donation-form" action="">
+						<div class="row">
+							<div class="col-sm-6 donation-inputs-column">
+								<label for="card-number">Card Number</label>
+								<input type="number" name="card-number" id="card-number" placeholder="1234 5678 9012 3456" required>
+
+								<label for="expiry-inputs">Expiry</label>
+								<div class="expiry-inputs">
+									<select name="expiry-month" id="expiry-month">
+										<option value="" selected disabled>Month</option>
+										<option value="01">Jan (01)</option>
+										<option value="02">Feb (02)</option>
+										<option value="03">Mar (03)</option>
+										<option value="04">Apr (04)</option>
+										<option value="05">May (05)</option>
+										<option value="06">Jun (06)</option>
+										<option value="07">Jul (07)</option>
+										<option value="08">Aug (08)</option>
+										<option value="09">Sep (09)</option>
+										<option value="10">Oct (10)</option>
+										<option value="11">Nov (11)</option>
+										<option value="12">Dec (12)</option>
+									</select>
+
+									<div class="expiry-inputs-divider"></div>
+
+									<select name="expiry-year" id="expiry-year">
+										<option value="" selected disabled>Year</option>
+										<option value="2024">2024</option>
+										<option value="2025">2025</option>
+										<option value="2026">2026</option>
+										<option value="2027">2027</option>
+										<option value="2028">2028</option>
+										<option value="2029">2029</option>
+									</select>
+								</div>
+
+								<label for="cvv">CVV</label>
+								<input type="password" name="cvv" id="cvv" placeholder="123" required>
+
+								<label for="donation-amount">Donation Amount (€)</label>
+								<div class="donation-amount-input">
+									<input type="number" name="donation-amount" id="donation-amount" placeholder="10" required>
+
+									<input type="button" value="🎲" id="randomise-donation-amount">
+								</div>
+							</div>
+							<div class="col-sm-6 donation-inputs-column">
+								<label for="full-name">Full Name</label>
+								<input type="text" name="full-name" id="full-name" placeholder="John Doe" required>
+
+								<label for="email">Email</label>
+								<input type="email" name="email" id="email" placeholder="johndoe@example.com" required>
+
+								<label for="address-line-1">Address Line 1.</label>
+								<input type="text" name="address-line-1" id="address-line-1" placeholder="123 Main St." required>
+
+								<label for="address-line-2">Address Line 2.</label>
+								<input type="text" name="address-line-2" id="address-line-2" placeholder="Apartment, suite, etc. (optional)">
+
+								<label for="city">City</label>
+								<input type="text" name="city" id="city" placeholder="Dublin, etc." required>
+
+								<label for="country">Country</label>
+								<input type="text" name="country" id="country" placeholder="Ireland, etc." required>
+
+								<label for="zip-code">Zip Code</label>
+								<input type="number" name="zip-code" id="zip-code" placeholder="D01 ...." required>
+
+
+								<input type="submit" value="Submit">
+							</div>
+						</div>
+					</form>
 				</div>
 				<div class="col-md-6 image-grid">
 					<div class="grid-item">
