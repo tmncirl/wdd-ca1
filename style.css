@@ -64,40 +64,6 @@ table {
 
 /* Consequences page, done by Alex Daly */
 
-/* CSS for desktops (768px and up), size ranges gotten from W3Schools https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
-@media only screen and (min-width: 1010px) {
-
-	.cq-pic {
-		max-width: 40%;
-	}
-	
-	#cq-pic {
-		border: solid white 0.5px;
-		border-radius: 3.5%;		
-	}
-
-}
-
-/* Have to cut off image at 1024px as it does not look good when smaller */
-@media only screen and (max-width: 1024px) {
-	.cq-pic {
-		display: none;
-	}
-	
-	.cq-desc {
-		width: 176%;
-	}
-}
-
-/* CSS for mobile (768px and down) */
-@media only screen and (max-width: 768px) {
-
-	.cq-desc > p {
-		font-size: 100%;
-	}
-	
-}
-
 #cq-pic {
 	width: 100%;
 	height: auto;
@@ -124,7 +90,7 @@ html:has(.cq-body), .cq-body {
 }
 
 .cq-desc > p {
-	font-size: 100%;
+	font-size: 120%;
 }
 
 .cq-list {
@@ -149,7 +115,7 @@ html:has(.cq-body), .cq-body {
 	color: white;
 	background-color: #bfbfbf;
 	padding: 0.5%;
-	font-size: 120%;
+	font-size: 125%;
 	list-style-type: "˅";
 	border: double white 3px;
 	border-radius: 20px / 50%;
@@ -164,6 +130,10 @@ html:has(.cq-body), .cq-body {
 	display: none;
 	position: relative;
 	left: 1%;
+}
+
+.cq-list > ul > p {
+	font-size: 120%;
 }
 
 div.cq-form {
@@ -192,6 +162,43 @@ form.cq-form > input {
 	width: 350px;
 }
 
+/* CSS for desktops (768px and up), size ranges gotten from W3Schools https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+@media only screen and (min-width: 1010px) {
+
+	.cq-pic {
+		max-width: 40%;
+	}
+	
+	#cq-pic {
+		border: solid white 0.5px;
+		border-radius: 3.5%;		
+	}
+	
+}
+
+/* Have to cut off image at 1024px as it does not look good when smaller */
+@media only screen and (max-width: 1024px) {
+	.cq-pic {
+		display: none;
+	}
+	
+	.cq-desc {
+		width: 176%;
+	}
+	
+	.cq-desc > p {
+		font-size: 150%;
+	}
+}
+
+/* CSS for mobile (768px and down) */
+@media only screen and (max-width: 768px) {
+
+	.cq-desc > p {
+		font-size: 100%;
+	}
+	
+}
 
 /* End of consequences CSS */
 
@@ -202,9 +209,11 @@ form.cq-form > input {
 	text-align: center;
 	float: right;
 	width: 30%;
-	margin: 0.5% 0 1% 0;
+	margin: 0.5% 0 1%;
 	padding: 1% 0;
-	border: ridge 2px black;
+	border: double 3px black;
+	border-radius: 2% / 10%;
+	text-shadow: #e0e0e0 3px 4px;
 	
 }
 	
@@ -241,13 +250,27 @@ form.cq-form > input {
 }
 
 .ccp-desc {
-	background-color: red;
+	padding: 3%;
+	font-size: 120%;
+}
+
+.ccp-desc > ol {
+	list-style: inside;
+}
+
+.ccp-desc > ol > p {
+	margin: 0 0 0 4%;
 }
 
 @media only screen and (max-width: 1656px) {
-	.ccp-grid2, .ccp-grid4 {
+	.ccp-grid2 {
 		display: none;
 	}
+	
+	.ccp-grid4 {
+		grid-column: 1;
+		grid-row: 3;
+	}		
 	
 	.ccp-grid {
 		float: center;
@@ -255,6 +278,10 @@ form.cq-form > input {
 
 	.ccp-imgGrid > h2 {
 		font-size: 160%;
+	}
+	
+	.ccp-header {
+		width: 50%;
 	}
 }
 
