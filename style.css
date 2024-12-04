@@ -52,9 +52,9 @@ table {
 /* Colour variables in root selector, allows for easy changing of the websites colours on all pages */
 
 :root {
-	--primary: #820263; /* Byzantium */
-	--secondary: #D90368; /* Dogwood Rose */
-	--accent: #5B92E5 ; /* Gold */
+	--primary: #f5f5f5; /* Slightly darker than white */
+	--secondary: #bfbfbf; /* Light gray */
+	--accent: #5B92E5 ; /* Blue */
 	--background-primary-color: #EEEEEE;
 
 	/* Fallback fonts after google font if it doesn't load */
@@ -95,8 +95,7 @@ html:has(.cq-body), .cq-body {
 
 .cq-list {
 	background-color: var(--secondary);
-	border: 1px solid black;
-	padding: 1%;
+	padding: 1.5% 5% 1.5% 1.5%;
 	border-radius: 0.5% / 2.5%;
 	margin: 0.5%;
 	width: 99%;
@@ -113,11 +112,11 @@ html:has(.cq-body), .cq-body {
 /* CSS to make buttons look nice, and get bigger when being hovered over */
 #cq-listBut {
 	color: white;
-	background-color: #bfbfbf;
+	background-color: var(--accent);
 	padding: 0.5%;
 	font-size: 125%;
 	list-style-type: "˅";
-	border: double white 3px;
+	border: double var(--secondary) 3px;
 	border-radius: 20px / 50%;
 }
 
@@ -254,8 +253,13 @@ form.cq-form > input {
 	font-size: 120%;
 }
 
+.ccp-desc > ol > li {
+	font-size: 130%;
+	font-weight: bold;
+}
+
 .ccp-desc > ol {
-	list-style: inside;
+	list-style: square;
 }
 
 .ccp-desc > ol > p {
