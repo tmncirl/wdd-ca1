@@ -94,9 +94,17 @@
 								<label for="cvv">CVV</label>
 								<input type="password" name="cvv" id="cvv" placeholder="123" required>
 
-								<label for="donation-amount">Donation Amount (€)</label>
+								<label for="donation-amount">Donation Amount</label>
 								<div class="donation-amount-input">
-									<input type="number" name="donation-amount" id="donation-amount" placeholder="10" required>
+									<select name="donation-amount" id="donation-amount">
+										<option value="2">€2</option>
+										<option value="5">€5</option>
+										<option value="10">€10</option>
+										<option value="25">€25</option>
+										<option value="50">€50</option>
+										<option value="100">€100</option>
+										<option value="">Custom</option>
+									</select>
 
 									<input type="button" value="🎲" id="randomise-donation-amount">
 								</div>
