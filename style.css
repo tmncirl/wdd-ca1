@@ -103,7 +103,8 @@ table {
 	height: auto;
 }
 
-.cq-body {
+/* Need to select html tag for the consequence page only, selector only takes the html tag with a child of the class cq-body. It also takes .cq-body*/
+html:has(.cq-body), .cq-body {
 	background-color: var(--primary);
 }
 
@@ -143,6 +144,7 @@ table {
 	list-style: inside;
 }
 
+/* CSS to make buttons look nice, and get bigger when being hovered over */
 #cq-listBut {
 	color: white;
 	background-color: #bfbfbf;
@@ -157,6 +159,7 @@ table {
 	transform: scale(1.08);
 }
 
+/* Makes hide-able text not display by default so buttons display */
 #cq-food, #cq-water, #cq-health, #cq-env, #cq-biodiv {
 	display: none;
 	position: relative;
@@ -170,6 +173,7 @@ div.cq-form {
 	width: 99%;
 }
 
+/* CSS for the form, and form container */
 .cq-formHeader > h3 {
 	font-size: 200%;
 }
@@ -193,9 +197,43 @@ form.cq-form > input {
 
 /* Current Climate Change Prevention Page by Alex Daly */
 
+.ccp-imgGrid {
+	background-color: blue;
+}
+
 .ccp-grid {
+	margin: 5% 0 0 2%;
 	display: grid;
-	
+	gap: 5% 2%;
+}
+
+.ccp-grid1 {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.cpp-grid1 > p {
+	text-align: center;
+
+}
+
+.ccp-grid2 {
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.ccp-grid3 {
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.ccp-grid4 {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.ccp-desc {
+	background-color: red;
 }
 
 
