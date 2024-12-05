@@ -18,7 +18,7 @@
 		
 		<script src="js/cccp.js"></script>
 	</head>
-	<body onload="greetingUpdate()">
+	<body onload="startFunc()">
 		<!-- Main container and row, col boostrap divs -->
 		<div class="container-fluid cccp-body">
 			<nav class="navbar navbar-expand-lg navbarCustom"> <!-- Navbar taken from bootstrap and adapted, link on consequences page -->
@@ -27,10 +27,12 @@
 						<img src="img/logo.png" alt="UN Logo" id="logo">
 					</a>
 					
+					<!-- Navbar dropdown button, hidden on desktop -->
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					
+					<!-- Navbar code, its the same on all pages -->
 					<div class="collapse navbar-collapse" id="navbarNav">
 						<ul class="navbar-nav">
 							<li class="nav-item">
@@ -56,7 +58,7 @@
 				</div>
 			</nav>
 			<br>
-			<!-- Header with title -->
+			<!-- Header with title, empty columns to make header in the middle of the page. -->
 			<div class="row">
 				<div class="col-4"></div>
 				<div class="col-4 ccp-header">
@@ -125,14 +127,16 @@
 				
 				</div>
 			</div>
-			
+			<div class="emptyDiv"></div> <!--Empty div to make space for mobile versions where the gallery takes up part of the ad div-->
 			<div class="row">
-				<div class="col-12">
+				<div class="col-12 ccp-ad"> <!-- Div for ad and button, to go below the other elements -->
 					<button type="button" onclick="randomAd()" id="randomBut">Click to get another ad</button>
 					<br>
-					<h2 id="adTitle"></h2>
-					<br>
-					<p id="adCont"></p>
+					<div class="ccp-adCont">
+						<h2 id="adTitle"></h2>
+						<br>
+						<p id="adCont"></p>
+					</div>
 				</div>
 		
 				

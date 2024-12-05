@@ -274,6 +274,40 @@ form.cq-form > input {
 	margin: 0 0 0 4%;
 }
 
+.emptyDiv {
+	display: none;
+}
+
+.ccp-ad {
+	margin: 1%;
+	padding: 1%;
+	width: 98%;
+}
+
+#randomBut {
+	padding: 0.5%;
+	margin: 0.5% 0;
+	border: var(--secondary) 2px solid;
+	border-radius: 10% / 30%;
+	background-color: var(--accent);
+}
+
+.ccp-adCont {
+	padding: 1%;
+	border: gray double 2px;
+	border-radius: 2% / 10%;
+	background-color: var(--secondary);
+}
+
+#adTitle {
+	font-size: 130%;
+}
+
+#adCont {
+	font-size: 115%;
+}
+
+/* These options hide and move around elements to make the website look better on mobile, moving images on the grid and making text bigger / more readable on mobile */
 @media only screen and (max-width: 1656px) {
 	.ccp-grid2 {
 		display: none;
@@ -294,6 +328,19 @@ form.cq-form > input {
 	
 	.ccp-header {
 		width: 50%;
+	}
+	
+	.emptyDiv {
+		display: block;
+		height: 80px;
+	}
+	
+}
+
+/* Div is no longer needed to seperate rows below this size */
+@media only screen and (max-width: 965px) {
+	.emptyDiv {
+		display: none;
 	}
 }
 
