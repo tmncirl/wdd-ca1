@@ -18,7 +18,7 @@
 		
 		<script src="js/cccp.js"></script>
 	</head>
-	<body>
+	<body onload="greetingUpdate()">
 		<!-- Main container and row, col boostrap divs -->
 		<div class="container-fluid cccp-body">
 			<nav class="navbar navbar-expand-lg navbarCustom"> <!-- Navbar taken from bootstrap and adapted, link on consequences page -->
@@ -104,6 +104,7 @@
 				
 				<!-- Div to hold description/test to the left of the page -->
 				<div class="col-6 ccp-desc">
+					<p id="greetingText">g</p>
 					<p>Climate change is a complicated issue, we are aware of its effects and causes but sometimes it can seem like we are powerless to stop it.</p>
 					<p>Forunately this is not the case, we are well capable of stopping or slowing climate change with the proper effort and leveraging of technology</p>
 					<br>

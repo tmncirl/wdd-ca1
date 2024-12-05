@@ -249,6 +249,13 @@ form.cq-form > input {
 	grid-row: 2;
 }
 
+#greetingText {
+	font-weight: bold;
+	font-size: 130%;
+	position: relative;
+	right: 2%;
+}
+
 .ccp-desc {
 	padding: 3%;
 	font-size: 120%;
