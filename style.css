@@ -271,8 +271,10 @@ html:has(.ccp-body), .ccp-body {
 	list-style: square;
 }
 
-.ccp-desc > ol > p {
+.ccp-desc ol > li > p {
 	margin: 0 0 0 4%;
+	font-size: 75%;
+	font-weight: normal;
 }
 
 .emptyDiv {
