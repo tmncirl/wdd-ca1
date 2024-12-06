@@ -1,3 +1,6 @@
+// Donations are stored outside of the donation function so it stays consistent through button presses, and it is randomised to make it seem more real.
+var donations = Math.floor(Math.random() * (10000 - 5000) + 5000);
+
 // ad array content and ad array header, strings for ads are stored in the arrays.
 const aac = [];
 const aah = [];
@@ -16,10 +19,12 @@ aac[2] = "Do you want to go vegan, but cant stand the thought of going without y
 aah[3] = "Would you like to save a species from extinction?";
 aac[3] = "By donating 5 euro or more you could help save a species from climate change induced extinction today! Many species of plants and animals around the world are struggling under the pressures of climate change. Your donation could help us house these animals and keep them safe! <br>Please see our website https://www.saveanimalsfromtheclimate.org today, and do your part!";
 
-//this function is called at the start to call both greetingUpdate and randomAd when the page loads
+//this function is called at the start to call both greetingUpdate and randomAd when the page loads. Donations are loaded onto the page when the page first loads, and again when the button is clicked and value updated.
 function startFunc() {
 	greetingUpdate();
 	randomAd();
+	document.getElementById("donateNum").innerHTML = ("€" + donations + " has been donated so far!");
+	alert("hi");
 }
 
 // This function checks the current hour and displays a greeting depending on what time of the day it is.
@@ -45,4 +50,8 @@ function randomAd() {
 
 	adTitle.innerHTML = aah[randomSelect];
 	adCont.innerHTML = aac[randomSelect];	
+}
+
+function donateFunc() {
+	alert(donations);
 }

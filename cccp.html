@@ -128,6 +128,22 @@
 				</div>
 			</div>
 			<div class="emptyDiv"></div> <!--Empty div to make space for mobile versions where the gallery takes up part of the ad div-->
+			
+			<!-- Div for a donate button that displays the amount donated so far -->
+			<div class="row">
+				<div class="col-6 ccp-donate">
+					<h2>Please donate to save the climate today!</h2>
+					<p id="donateNum"></p>
+					<form>
+						<label for="donation">How much would you like to donate?</label>
+						<input type="text" name="donation" id="donation">
+						<button type="button" onclick="donateFunc()">Donate!</button>
+					</form>
+				</div>
+				
+				<div class="col-6"></div> <!-- Empty div taking up the other half of the page to format correctly -->
+			
+			</div>
 			<div class="row">
 				<div class="col-12 ccp-ad"> <!-- Div for ad and button, to go below the other elements -->
 					<button type="button" onclick="randomAd()" id="randomBut">Click to get another ad</button>

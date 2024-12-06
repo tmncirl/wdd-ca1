@@ -82,26 +82,26 @@
 					<h2>Effects of Climate Change</h2>
 					<p>Click on the buttons to see how climate change will effect these areas!</p>
 					<br>
-					<ul>
-						<!-- Display toggle can hide or show any element, reducing code. List of  -->
-						<button id="cq-listBut" onclick="displayToggle('cq-food')"><li> Food</li></button>
-						<p id="cq-food"><br><br>Heat, droughts and extreme weather will make farming much harder in most of the world. Crops that are suitable for growing in certain areas will have to move to stay in the same climates. Some of the worst impacts can be mitigated by using greenhouses and adjacent technologies but food production will still be decreased massively. A warmer climate will also mean more water is needed to grow crops which will put a strain on the decreasing supply of water worldwide.</p><br><br>
-						
-						<button id="cq-listBut" onclick="displayToggle('cq-water')"><li> Water</li></button>
-						<p id="cq-water"><br><br>Climate change will lead to increased droughts but also increased flooding. Weather events are getting more frequent and severe as the planet warms up. These factors will put strain on our already struggling water resouces. This could be disastrous as it will be much hotter, meaning people will need more water than is currently available.<br>
-						The ocean also absorbs carbon dioxide from the atmosphere, which is making it more acidic over time. This could kill off or disrupt a lot of marine life.</p><br><br>
-						
-						<button id="cq-listBut" onclick="displayToggle('cq-env')"><li> The environment</li></button>
-						<p id="cq-env"><br><br>The environment will be affected heavily by climate change. As the world continues to warm, many species will be forced to migrate to keep in a climate that suits them. This could lead to the extinction of many species.<br>
-						Many habitats would also not survive heavy climate change such as coral reefs and some animals or plants would not have the time they need to adapt, and would simply die off.</p><br><br>
-						
-						<button id="cq-listBut" onclick="displayToggle('cq-health')"><li> Human Health</li></button>
-						<p id="cq-health"><br><br>Weather events are getting increasingly frequent and severe, which will lead to death during and in the aftermath of these events. Hurricanes and wildfires have already become much deadlier in the US. Flooding can spread waterborne diseases, and disease carrying pests will move into new habitats, further spreading diseases to locations they have not been before.</p><br><br>
-						
-						<button id="cq-listBut" onclick="displayToggle('cq-biodiv')"><li> Bio Diversity</li></button>
-						<p id="cq-biodiv"><br><br>The warming of the planet is affecting the seasons and weather patterns that have been stable for a long time. Certain plants are unable to grow as they normally have, or in the case of food are lower quality. This will lead to the loss of bio diversity.<br>
-						Warming will also lead to an increase of desertifcation. This will cause further warming as nature will not be able to regulate conditions and participate in cycles that cool the planet.</p><br><br>
-					</ul>
+					
+					<!-- Display toggle can hide or show any element, reducing code. List of  -->
+					<button class="cq-listBut" onclick="displayToggle('cq-food')">˅ Food</button>
+					<p id="cq-food"><br><br>Heat, droughts and extreme weather will make farming much harder in most of the world. Crops that are suitable for growing in certain areas will have to move to stay in the same climates. Some of the worst impacts can be mitigated by using greenhouses and adjacent technologies but food production will still be decreased massively. A warmer climate will also mean more water is needed to grow crops which will put a strain on the decreasing supply of water worldwide.</p><br><br>
+					
+					<button class="cq-listBut" onclick="displayToggle('cq-water')">˅ Water</button>
+					<p id="cq-water"><br><br>Climate change will lead to increased droughts but also increased flooding. Weather events are getting more frequent and severe as the planet warms up. These factors will put strain on our already struggling water resouces. This could be disastrous as it will be much hotter, meaning people will need more water than is currently available.<br>
+					The ocean also absorbs carbon dioxide from the atmosphere, which is making it more acidic over time. This could kill off or disrupt a lot of marine life.</p><br><br>
+					
+					<button class="cq-listBut" onclick="displayToggle('cq-env')">˅ The environment</button>
+					<p id="cq-env"><br><br>The environment will be affected heavily by climate change. As the world continues to warm, many species will be forced to migrate to keep in a climate that suits them. This could lead to the extinction of many species.<br>
+					Many habitats would also not survive heavy climate change such as coral reefs and some animals or plants would not have the time they need to adapt, and would simply die off.</p><br><br>
+					
+					<button class="cq-listBut" onclick="displayToggle('cq-health')">˅ Human Health</button>
+					<p id="cq-health"><br><br>Weather events are getting increasingly frequent and severe, which will lead to death during and in the aftermath of these events. Hurricanes and wildfires have already become much deadlier in the US. Flooding can spread waterborne diseases, and disease carrying pests will move into new habitats, further spreading diseases to locations they have not been before.</p><br><br>
+					
+					<button class="cq-listBut" onclick="displayToggle('cq-biodiv')">˅ Bio Diversity</button>
+					<p id="cq-biodiv"><br><br>The warming of the planet is affecting the seasons and weather patterns that have been stable for a long time. Certain plants are unable to grow as they normally have, or in the case of food are lower quality. This will lead to the loss of bio diversity.<br>
+					Warming will also lead to an increase of desertifcation. This will cause further warming as nature will not be able to regulate conditions and participate in cycles that cool the planet.</p><br><br>
+				
 				</div>
 			</div>
 			<br>
@@ -111,24 +111,25 @@
 					<form class="cq-form">
 					
 						<!-- Form, with fields for each input and a small explanation of the form at the top under cq-formHeader -->
-						<span class="cq-formHeader">
-						<h3>Climate Crisis Compensation Request</h3>
-						<p>Have you or a loved one been affected by climate change?<br> Please fill out the form below! You might be liable for damages!</p></span>
+						<div class="cq-formHeader">
+							<h3>Climate Crisis Compensation Request</h3>
+							<p>Have you or a loved one been affected by climate change?<br> Please fill out the form below! You might be liable for damages!</p>
+						</div>
 						<br>
 						<label for="cq-climateCrisis">Please describe the crisis you endured.</label><br>
 						<textarea id="cq-climateCrisis" name="cq-climateCrisis" rows="2" cols="35"></textarea>
 						<br><br>
 						
 						<label for="cq-priceEst">How much would you like to recieve from this claim?</label> <br>
-						<input type="text" id="cq-priceEst" name="cq-priceEst"></input>
+						<input type="text" id="cq-priceEst" name="cq-priceEst">
 						<br><br>
 						
 						<label for="cq-email">Please enter your email.</label><br>
-						<input type="text" name="cq-email" id="cq-email"></input>
+						<input type="text" name="cq-email" id="cq-email">
 						<br><br>
 						
 						<label for="cq-tele">Please enter your phone number.</label><br>
-						<input type="text" name="cq-tele" id="cq-tele"></input>
+						<input type="text" name="cq-tele" id="cq-tele">
 						
 						
 						<br><br>

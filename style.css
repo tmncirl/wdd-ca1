@@ -53,7 +53,7 @@ table {
 
 :root {
 	--primary: #ffffff; /* White */
-	--secondary: #bfbfbf; /* Light gray */
+	--secondary: #e6e3e3; /* Light gray */
 	--accent: #5B92E5 ; /* Blue */
 	--background-primary-color: #EEEEEE;
 
@@ -103,17 +103,12 @@ html:has(.cq-body), .cq-body {
 	font-size: 200%;
 }
 
-.cq-list > ul{
-	list-style: inside;
-}
-
 /* CSS to make buttons look nice, and get bigger when being hovered over */
-#cq-listBut {
+.cq-listBut {
 	color: white;
 	background-color: var(--accent);
 	padding: 0.5%;
 	font-size: 125%;
-	list-style-type: "˅";
 	border: double var(--secondary) 3px;
 	border-radius: 20px / 50%;
 }
