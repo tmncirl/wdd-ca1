@@ -279,6 +279,20 @@ html:has(.ccp-body), .ccp-body {
 	display: none;
 }
 
+.ccp-donate {
+	margin: 2%;
+}
+
+#donation {
+	width: 10%;
+}
+
+.ccp-donate > h2 {
+	font-weight: bold;
+	font-size: 130%;
+}
+
+
 .ccp-ad {
 	margin: 1%;
 	padding: 1%;

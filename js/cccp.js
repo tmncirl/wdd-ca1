@@ -24,7 +24,6 @@ function startFunc() {
 	greetingUpdate();
 	randomAd();
 	document.getElementById("donateNum").innerHTML = ("€" + donations + " has been donated so far!");
-	alert("hi");
 }
 
 // This function checks the current hour and displays a greeting depending on what time of the day it is.
@@ -52,6 +51,16 @@ function randomAd() {
 	adCont.innerHTML = aac[randomSelect];	
 }
 
+// Function handles taking input from the form, checking if its a number, rejecting it if not. It updates the donation by the amount entered. 
 function donateFunc() {
-	alert(donations);
+	var donateNumber = document.getElementById("donation").value;
+	var donateError = document.getElementById("donateError");
+		
+	if(isNaN(Number(donateNumber)) || donateNumber < 0) {
+		donateError.innerHTML = "The donation entered is invalid";
+	} else {
+		donateError.innerHTML = "";
+		donations = Number(donations) + Number(donateNumber);
+		document.getElementById("donateNum").innerHTML = ("€" + donations + " has been donated so far!");
+	}
 }
