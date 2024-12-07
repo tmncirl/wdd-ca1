@@ -8,12 +8,34 @@ document.getElementById('donation-amount').addEventListener('change', (e) => {
     }
 });
 
+// ----- Manipulation of the DOM via JavaScript #1 -----
 function showCustomAmountInput() {
     customDonationAmountInput.classList.add('shown');
 }
 
 function hideCustomAmountInput() {
     customDonationAmountInput.classList.remove('shown');
+}
+
+// ----- Manipulation of the DOM via JavaScript #2 -----
+function randomiseDonationAmount() {
+    // This is ran via an onclick in the #randomise-donation-amount button
+
+    const donationAmountSelect = document.getElementById('donation-amount');
+
+    // We have to subtract 1 to account for the 'Custom' option
+    const selectOptionsAmount = donationAmountSelect.options.length;
+    const randomSelectOption = Math.floor(Math.random() * selectOptionsAmount);
+
+    if (randomSelectOption === donationAmountSelect.options.length - 1) {
+        showCustomAmountInput();
+        // Set value to a random number between 1 and 100
+        customDonationAmountInput.value = Math.floor(Math.random() * 99) + 1;
+    } else {
+        hideCustomAmountInput();
+    }
+
+    donationAmountSelect.selectedIndex = randomSelectOption;
 }
 
 function handleSubmitDonationForm(event) {
@@ -50,6 +72,7 @@ function handleSubmitDonationForm(event) {
     console.log("Donation amount passed validation.");
 
     console.log("Form passed validation.");
+
     alert('Thank you for your donation.');
 }
 
