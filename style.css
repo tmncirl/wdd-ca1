@@ -384,7 +384,7 @@ html:has(.ccp-body), .ccp-body {
 /* Thomas */
 /* ------ */
 
-/* What can we do about it? */
+/* Shared CSS for all pages */
 :root {
 	--small-rounded-corners: 0.5rem;
 	--small-gap: 0.5rem;
@@ -434,79 +434,80 @@ html:has(.ccp-body), .ccp-body {
 	border-radius: var(--small-rounded-corners);
 }
 
-.divider {
+/* What can we do about it? by Thomas Malinovsky */
+.wd-divider {
 	width: 100%;
 	height: 1px;
 	background-color: var(--accent);
 	margin: 0.5rem 0;
 }
 
-.page-title {
+.wd-page-title {
 	font-size: 3rem;
 	font-family: var(--heading-fonts);
 	font-weight: bold;
 	padding: var(--small-gap) 0;
 }
 
-.page-description {
+.wd-page-description {
 	font-size: 1.5rem;
 	padding-bottom: var(--small-gap);
 }
 
-.image-grid {
+.wd-image-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: var(--image-grid-gap);
 }
 
-.image-grid .grid-item {
+.wd-image-grid .wd-grid-item {
 	aspect-ratio: 5/4;
 }
 
-.image-grid .grid-item img {
+.wd-image-grid .wd-grid-item img {
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
 	border-radius: var(--small-rounded-corners);
 }
 
-.main-content {
+.wd-main-content {
 	width: 85vw;
 }
 
-.page-content {
+.wd-page-content {
 	padding: 1rem;
 }
 
-.page-content > * {
+.wd-page-content > * {
 	font-size: 1.2rem;
 }
 
-.page-content h2 {
+.wd-page-content h2 {
 	font-size: 2rem;
 	font-family: var(--heading-fonts);
 	padding-top: var(--small-gap);
 }
 
-.page-content ul {
+.wd-page-content ul {
 	list-style: disc;
 	padding-left: 2.5rem;
 	box-sizing: border-box;
 }
 
-.page-content ul li {
+.wd-page-content ul li {
 	margin-bottom: var(--small-gap);
 }
 
-.donation-form label {
+.wd-donation-form label {
 	margin-top: 1ch;
 	font-family: var(--heading-fonts);
 	font-weight: 550;
 }
 
-.donation-form input,
-.donation-form button,
-.donation-form select {
+.wd-donation-form input,
+.wd-donation-form button,
+.wd-donation-form select {
 	font-family: Arial, Helvetica, sans-serif;
 	border: 1px solid var(--accent);
 	outline: none;
@@ -515,64 +516,75 @@ html:has(.ccp-body), .ccp-body {
 	padding: 0.5rem 1ch;
 }
 
-.donation-form input:focus,
-.donation-form button:focus,
-.donation-form select:focus {
+.wd-donation-form input[type="submit"] {
+	background-color: var(--accent);
+	color: var(--background-primary-color);
+	font-weight: bold;
+	border: none;
+	outline: none;
+	margin-top: 2ch;
+}
+
+.wd-donation-form input:focus,
+.wd-donation-form button:focus,
+.wd-donation-form select:focus {
 	box-shadow: 0 0 5px var(--accent);
 }
 
-.donation-form input:user-invalid,
-.donation-form button:user-invalid,
-.donation-form select:user-invalid {
+.wd-donation-form input:user-invalid,
+.wd-donation-form button:user-invalid,
+.wd-donation-form select:user-invalid {
     border: 1px solid var(--invalid-input-color);
 }
 
-.donation-form input:user-invalid:focus,
-.donation-form button:user-invalid:focus,
-.donation-form select:user-invalid:focus {
+.wd-donation-form input:user-invalid:focus,
+.wd-donation-form button:user-invalid:focus,
+.wd-donation-form select:user-invalid:focus {
 	box-shadow: 0 0 5px var(--invalid-input-color);
 }
 
-.donation-inputs-column {
+.wd-donation-inputs-column {
 	display: flex;
 	flex-direction: column;
 }
 
-.expiry-inputs {
+.wd-expiry-inputs {
 	display: flex;
 	flex-direction: row;
 }
 
-.expiry-inputs select {
+.wd-expiry-inputs select {
 	flex: 1;
 }
 
-.expiry-inputs-divider {
+.wd-expiry-inputs-divider {
 	width: 1ch;
 }
 
-.expiry-inputs label {
+.wd-expiry-inputs label {
 	font-weight: normal;
 }
 
-.donation-amount-input {
+.wd-donation-amount-input {
 	display: flex;
 	flex-direction: row;
 }
 
-.donation-amount-input #donation-amount {
+.wd-donation-amount-input .wd-donation-amount {
 	flex: 1;
 }
 
-.donation-amount-input #randomise-donation-amount {
+.wd-donation-amount-input .wd-randomise-donation-amount {
 	background-color: var(--accent);
 	margin-left: 1ch;
 }
 
-#custom-donation-amount {
+.wd-custom-donation-amount {
 	display: none;
 }
 
-#custom-donation-amount.shown {
+.wd-custom-donation-amount.shown {
 	display: block;
 }
+
+/* End of What can we do about it? */
