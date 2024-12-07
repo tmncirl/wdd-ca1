@@ -71,9 +71,35 @@ function handleSubmitDonationForm(event) {
     }
     console.log("Donation amount passed validation.");
 
-    console.log("Form passed validation.");
+    const email = inputs['email'].value;
+    if (!validateEmail(email)) {
+        return;
+    }
+    console.log("Email passed validation.");
+
+    console.log("--- Form passed validation ---");
 
     alert('Thank you for your donation.');
+}
+
+function validateEmail(email) {
+    if (email === null || email === '') {
+        return alert('Please enter an email.');
+    }
+
+    const emailRegex = /[A-Za-z0-9._+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+/;
+
+    /** This regex:
+    - Check for groups of uppercase and lowercase letters, numbers, dots, underscores, pluses, and dashes before the @ symbol
+    - Checks for groups of uppercase and lowercase letters, numbers, dots, and dashes after the @ symbol, excluding letters that can't be used in a domain name such as underscore
+    - The final part checks for a dot, and any uppercase or lowercase letters after that
+    **/
+
+    if (email.test(emailRegex)) {
+        return true;
+    } else {
+        return alert('Please enter a valid email.')
+    }
 }
 
 function validateDonationAmount(inputs) {
@@ -135,6 +161,7 @@ function isValidLuhn(cardNumber) {
     // https://medium.com/@charithjayanetti/understanding-the-luhn-algorithm-a-step-by-step-guide-to-validating-and-verifying-numbers-8df6975df9fe
 
     // Convert to string, split string into array, convert each digit into a number, reverse array
+    // Also, JS that uses arrays :)
     const cardNumberReversed = cardNumber.toString().split('').map(Number).reverse();
 
     let sum = 0;
