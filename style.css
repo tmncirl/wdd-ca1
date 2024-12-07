@@ -52,9 +52,9 @@ table {
 /* Colour variables in root selector, allows for easy changing of the websites colours on all pages */
 
 :root {
-	--primary: #820263; /* Byzantium */
-	--secondary: #D90368; /* Dogwood Rose */
-	--accent: #5B92E5 ; /* Gold */
+	--primary: #ffffff; /* White */
+	--secondary: #e6e3e3; /* Light gray */
+	--accent: #5B92E5 ; /* Blue */
 	--background-primary-color: #EEEEEE;
     --invalid-input-color: rgba(255, 0, 0, 0.5);
 
@@ -65,54 +65,19 @@ table {
 
 /* Consequences page, done by Alex Daly */
 
-/* CSS for desktops (768px and up), size ranges gotten from W3Schools https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
-@media only screen and (min-width: 1010px) {
-
-	.cq-pic {
-		max-width: 40%;
-	}
-	
-	#cq-pic {
-		border: solid white 0.5px;
-		border-radius: 3.5%;		
-	}
-
-}
-
-/* Have to cut off image at 1024px as it does not look good when smaller */
-@media only screen and (max-width: 1024px) {
-	.cq-pic {
-		display: none;
-	}
-	
-	.cq-desc {
-		width: 176%;
-	}
-}
-
-/* CSS for mobile (768px and down) */
-@media only screen and (max-width: 768px) {
-
-	.cq-desc > p {
-		font-size: 100%;
-	}
-	
-}
-
 #cq-pic {
 	width: 100%;
 	height: auto;
 }
 
-.cq-body {
+/* Need to select html tag for the consequence page only, selector only takes the html tag with a child of the class cq-body. It also takes .cq-body*/
+html:has(.cq-body), .cq-body {
 	background-color: var(--primary);
 }
 
 .cq-desc {
 	text-align: center;
 	padding: 2%;
-	background-color: var(--secondary);
-	border: ridge #000000 3px;
 	margin: 0;
 }
 	
@@ -124,13 +89,12 @@ table {
 }
 
 .cq-desc > p {
-	font-size: 100%;
+	font-size: 120%;
 }
 
 .cq-list {
 	background-color: var(--secondary);
-	border: 1px solid black;
-	padding: 1%;
+	padding: 1.5% 5% 1.5% 1.5%;
 	border-radius: 0.5% / 2.5%;
 	margin: 0.5%;
 	width: 99%;
@@ -140,37 +104,40 @@ table {
 	font-size: 200%;
 }
 
-.cq-list > ul{
-	list-style: inside;
-}
-
-#cq-listBut {
+/* CSS to make buttons look nice, and get bigger when being hovered over */
+.cq-listBut {
 	color: white;
-	background-color: #bfbfbf;
+	background-color: var(--accent);
 	padding: 0.5%;
-	font-size: 120%;
-	list-style-type: "˅";
-	border: double white 3px;
+	font-size: 125%;
+	border: double var(--secondary) 3px;
 	border-radius: 20px / 50%;
 }
 
-#cq-listBut:hover {
+.cq-listBut:hover {
 	transform: scale(1.08);
 }
 
+/* Makes hide-able text not display by default so buttons display */
 #cq-food, #cq-water, #cq-health, #cq-env, #cq-biodiv {
 	display: none;
 	position: relative;
 	left: 1%;
 }
 
+.cq-list > ul > p {
+	font-size: 120%;
+}
+
 div.cq-form {
 	background-color: var(--secondary);
 	padding: 1.5%;
-	margin: 0 0.5%;
+	margin: 0.5% 0.5%;
 	width: 99%;
+	border-radius: 1% / 2.5%;
 }
 
+/* CSS for the form, and form container */
 .cq-formHeader > h3 {
 	font-size: 200%;
 }
@@ -189,15 +156,226 @@ form.cq-form > input {
 	width: 350px;
 }
 
+/* CSS for desktops (768px and up), size ranges gotten from W3Schools https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+@media only screen and (min-width: 1010px) {
+
+	.cq-pic {
+		max-width: 40%;
+	}
+	
+	#cq-pic {
+		border: solid white 0.5px;
+		border-radius: 3.5%;		
+	}
+	
+}
+
+/* Have to cut off image at 1024px as it does not look good when smaller */
+@media only screen and (max-width: 1024px) {
+	.cq-pic {
+		display: none;
+	}
+	
+	.cq-desc {
+		width: 176%;
+		margin: 0 0 0 -1%;
+		border-radius: 2.5% / 4%;
+	}
+	
+	.cq-desc > p {
+		font-size: 150%;
+	}
+	
+	#cq-listBut {
+		padding: 1.2%;
+	}
+}
+
+/* CSS for mobile (768px and down) */
+@media only screen and (max-width: 768px) {
+
+	
+}
 
 /* End of consequences CSS */
 
 /* Current Climate Change Prevention Page by Alex Daly */
 
-.ccp-grid {
-	display: grid;
+html:has(.ccp-body), .ccp-body {
+	background-color: var(--primary);
+}
+
+.ccp-header {
+	font-size: 200%;
+	text-align: center;
+	float: right;
+	width: 30%;
+	margin: 0.5% 0 1%;
+	padding: 1% 0;
+	border: double 3px black;
+	border-radius: 2% / 10%;
+	text-shadow: #e0e0e0 3px 4px;
 	
 }
+	
+.ccp-imgGrid {
+	text-align: center;
+	color: black;
+}
+
+.ccp-imgGrid > h2 {
+	font-size: 200%;
+	font-family: var(--heading-fonts);
+}
+
+.ccp-grid {
+	margin: 1% 0 0 0%;
+	display: grid;
+	gap: 5% 1%;
+}
+/* Setting the position in grid of items/pictures */
+.ccp-grid1 {
+	grid-column: 1;
+	grid-row: 1;
+}
+.ccp-grid2 {
+	grid-column: 2;
+	grid-row: 1;
+}
+.ccp-grid3 {
+	grid-column: 1;
+	grid-row: 2;
+}
+.ccp-grid4 {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+#greetingText {
+	font-weight: bold;
+	font-size: 130%;
+	position: relative;
+	right: 2%;
+}
+
+.ccp-desc {
+	padding: 3%;
+	font-size: 120%;
+}
+
+.ccp-desc > ol > li {
+	font-size: 130%;
+	font-weight: bold;
+}
+
+.ccp-desc > ol {
+	list-style: square;
+}
+
+.ccp-desc ol > li > p {
+	margin: 0 0 0 4%;
+	font-size: 75%;
+	font-weight: normal;
+}
+
+.emptyDiv {
+	display: none;
+}
+
+.ccp-donate {
+	margin: 2%;
+}
+
+#donation {
+	width: 10%;
+}
+
+.ccp-donate > h2 {
+	font-weight: bold;
+	font-size: 130%;
+}
+
+
+.ccp-ad {
+	margin: 1%;
+	padding: 1%;
+	width: 98%;
+}
+
+#randomBut {
+	padding: 0.5%;
+	margin: 0.5% 0;
+	border: var(--secondary) 2px solid;
+	border-radius: 10% / 30%;
+	background-color: var(--accent);
+}
+
+.ccp-adCont {
+	padding: 1%;
+	border: gray double 2px;
+	border-radius: 2% / 10%;
+	background-color: var(--secondary);
+}
+
+#adTitle {
+	font-size: 130%;
+}
+
+#adCont {
+	font-size: 115%;
+}
+
+/* These options hide and move around elements to make the website look better on mobile, moving images on the grid and making text bigger / more readable on mobile */
+@media only screen and (max-width: 1210px) {
+	.ccp-grid2 {
+		display: none;
+	}
+	
+	.ccp-grid4 {
+		grid-column: 1;
+		grid-row: 3;
+	}
+	
+	.ccp-gridimgM  {
+		width: 80%;
+	}
+	
+	.ccp-grid {
+		float: center;
+	}
+
+	.ccp-imgGrid > h2 {
+		font-size: 145%;
+	}
+	
+	.ccp-header {
+		width: 50%;
+	}
+	
+	.emptyDiv {
+		display: block;
+		height: 80px;
+	}
+	
+}
+
+/* Div is no longer needed to seperate rows below this size */
+@media only screen and (max-width: 768px) {
+	.emptyDiv {
+		display: none;
+	}
+	
+	.ccp-imgGrid {
+		display: none;
+	}
+	
+	.ccp-desc {
+		width: 100%;
+		margin: 0 0 0 2%;
+	}
+}
+
+
 
 
 /* End of Current Climate Change Prevention Page */

@@ -3,34 +3,37 @@
 	<head>
 	
 		<!-- Meta tags and title --!>
-		<title>Current Climate Change Prevention</title>
+		<title>Climate Change Prevention</title>
 		<meta name="author" content="Alex Daly">
 		<meta name="description" content="The current climate change prevention measures.">
+		<meta name="viewport">
 		
-		<!-- Goolge font links -->
+		<!-- Google font links -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		
 		<!-- Bootstrap and CSS links --!>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-		<link href="style.css" rel="stylesheet">
+		<link href="./style.css" rel="stylesheet">
 		
-		<script src="js/cccp.js"></script>
+		<script src="./js/cccp.js"></script>
 	</head>
-	<body>
+	<body onload="startFunc()">
 		<!-- Main container and row, col boostrap divs -->
-		<div class="container-fluid cccp-body">
+		<div class="container-fluid ccp-body">
 			<nav class="navbar navbar-expand-lg navbarCustom"> <!-- Navbar taken from bootstrap and adapted, link on consequences page -->
 				<div class="container-fluid">
 					<a class="navbar-brand" href="index.html">
 						<img src="img/logo.png" alt="UN Logo" id="logo">
 					</a>
 					
+					<!-- Navbar dropdown button, hidden on desktop -->
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					
+					<!-- Navbar code, its the same on all pages -->
 					<div class="collapse navbar-collapse" id="navbarNav">
 						<ul class="navbar-nav">
 							<li class="nav-item">
@@ -43,7 +46,7 @@
 								<a class="nav-link" href="consequences.html">Consequences</a>
 							</li>
 							<li>
-								<a class="nav-link active" href="cccp.html">Current Climate Change Preventions</a>
+								<a class="nav-link active" href="cccp.html">Climate Change Prevention</a>
 							</li>
 							<li>
 								<a class="nav-link" href="wcwdai.html">What Can We Do About It?</a>
@@ -56,18 +59,115 @@
 				</div>
 			</nav>
 			<br>
-			
+			<!-- Header with title, empty columns to make header in the middle of the page. -->
 			<div class="row">
-				<div class="col-5 ccp-imgGrid">
+				<div class="col-4"></div>
+				<div class="col-4 ccp-header">
+					<h1><b>Climate Change Prevention</b></h1>
+				</div>
+				<div class="col-4"></div>
+			</div>
+			
+			<!-- Second row with image grid and description/text -->
+			<div class="row">
+				<div class="col-6 ccp-imgGrid">
+					<h2><b>Methods of climate prevention</b></h2>
+					<p>Click on the images to see an article on the topic!</p>
+					<!-- Div for grid, grid items are numbered ccp-grid1-4 -->
 					<div class="ccp-grid">
-					
+						<div class="ccp-grid1">
+							<!-- Images link to their source, so people can find more information, targer="_blank" means the page will open in a new tab-->
+							<a href="https://pipelifeeco.ie/what-are-the-6-main-types-of-renewable-energy/" target="_blank">
+								<img src="img/CCP/renewEnergy.jpg" alt="A picture of solar panels with a wind farm in the background" class="ccp-gridimgM">
+								<br>
+							</a>
+							<p>Renewable Energy.</p>
+						</div>
+						<div class="ccp-grid2">
+							<a href="https://www.host-bioenergy.com/us/technology/carbon-capture/" target="_blank">
+								<img src="img/CCP/carbonCapt.jpg" alt="Carbon Capture Technologie in action on a field">
+							</a>
+							<p>Carbon capturing technologies.</p>
+						</div>
+						<div class="ccp-grid3">
+							<a href="https://climatefactchecks.org/vegan-diet-a-sustainable-approach-to-climate-change/" target="_blank">
+								<img src="img/CCP/plantDiet.png" alt="A plate half with the world, and the other half with plants" class="ccp-gridimgM">
+							</a>
+							<p>Reducing meat consumption.</p>
+						</div>
+						<div class="ccp-grid4">
+							<a href="https://www.ibtimes.co.uk/climate-change-major-global-shift-public-transport-can-cut-emissions-by-40-percent-1466250" target="_blank">
+								<img src="img/CCP/publicTrans.jpg" alt="An image of a very busy road, full of cars" class="ccp-gridimgM">
+							</a>
+							<p>Switching to public transport.</p>
+						</div>
+						
 					</div>
 				</div>
 				
-				<div class="col-7 ccp-desc">
+				<!-- Div to hold description/test to the left of the page -->
+				<div class="col-6 ccp-desc">
+					<p id="greetingText"></p>
+					<p>Climate change is a complicated issue, we are aware of its effects and causes but sometimes it can seem like we are powerless to stop it.</p>
+					<p>Forunately this is not the case, we are well capable of stopping or slowing climate change with the proper effort and leveraging of technology</p>
+					<br>
+					<p>New advances in carbon capturing, renewable energy, meat substitutes, and electric vehicles are making it easier and easier to become carbon neutral. As many countries strive to reach zero carbon emissions these technologies will play a crucial role in the near future.</p>
+					<br>
+					<ol>
+						<li>Energy<br>
+							<p>The biggest contributer to climate change is energy the energy we need to run our every day lives. This includes the generation of electricity but also transport and anything that consumes fuel to run.</p>
+							<br>
+						</li>
+						
+						
+						
+						<li>Carbon Capture<br>
+							<p>Carbon capture is when carbon is filtered from the atmosphere and stored to reduce global warming. The carbon is usually stored in underground reservoirs, or used in industry. They are energy intensive but could eventually be run off of renewable energy sources. They will be a vital technology on the road to zero carbon emissions.</p>
+							<br>
+						</li>
+						
+						
+						<li>Reducing meat consumption<br>
+							<p>Meat is the second biggest source of carbon emissions, with beef being by far the worst. The heavy consumption of meat in modern society is a big contributer to climate change. By reducing our reliance on meat in our diets we will reduce our effect on climate change.</p>
+							<br>
+						</li>
+						
+					</ol>
 				
 				</div>
 			</div>
+			<div class="emptyDiv"></div> <!--Empty div to make space for mobile versions where the gallery takes up part of the ad div-->
+			
+			<!-- Div for a donate button that displays the amount donated so far -->
+			<div class="row">
+				<div class="col-6 ccp-donate">
+					<h2>Please donate to save the climate today!</h2>
+					<p id="donateNum"></p>
+					<form>
+						<label for="donation" >How much would you like to donate?</label>
+						<input type="text" name="donation" id="donation"><p id="donateError"></p>
+						<button type="button" onclick="donateFunc()">Donate!</button>
+					</form>
+				</div>
+				
+				<div class="col-6"></div> <!-- Empty div taking up the other half of the page to format correctly -->
+			
+			</div>
+			<div class="row">
+				<div class="col-12 ccp-ad"> <!-- Div for ad and button, to go below the other elements -->
+					<button type="button" onclick="randomAd()" id="randomBut">Click to get another ad</button>
+					<br>
+					<div class="ccp-adCont">
+						<h2 id="adTitle">.</h2>
+						<br>
+						<p id="adCont"></p>
+					</div>
+				</div>
+		
+				
+			</div>
+			
+			
 			
 		</div>
 		
