@@ -95,7 +95,7 @@ function validateEmail(email) {
     - The final part checks for a dot, and any uppercase or lowercase letters after that
     **/
 
-    if (email.test(emailRegex)) {
+    if (emailRegex.test(email)) {
         return true;
     } else {
         return alert('Please enter a valid email.')
