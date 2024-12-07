@@ -69,6 +69,7 @@
 
 								<label for="expiry-inputs">Expiry</label>
 								<div class="expiry-inputs">
+									<!-- A select gives a list of options for the user -->
 									<select name="expiry-month" id="expiry-month">
 										<option value="" selected disabled>Month</option>
 										<option value="01">Jan (01)</option>
@@ -112,9 +113,12 @@
 										<option value="100">€100</option>
 										<option value="custom">Custom</option>
 									</select>
-
+									
+									<!-- Adding an onclick makes a js function run when the button is pressed -->
 									<input type="button" value="🎲" id="randomise-donation-amount" onclick="randomiseDonationAmount()">
 								</div>
+
+								<!-- This is hidden by default, and shown when the user selects the custom donation amount option -->
 								<input type="number" name="custom-donation-amount" id="custom-donation-amount" placeholder="Custom donation amount in (€)" min="0" step="0.01">
 							</div>
 							<div class="col-sm-6 donation-inputs-column">
