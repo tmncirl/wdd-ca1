@@ -568,3 +568,11 @@ html:has(.ccp-body), .ccp-body {
 	background-color: var(--accent);
 	margin-left: 1ch;
 }
+
+#custom-donation-amount {
+	display: none;
+}
+
+#custom-donation-amount.shown {
+	display: block;
+}
