@@ -676,3 +676,45 @@ html:has(.ccp-body), .ccp-body {
 	width: 100%;
 	text-align: center;
 }
+
+.ix-fact-box-container {
+	box-sizing: border-box;
+	padding: 1rem;
+}
+
+.ix-fact-box {
+	background-color: white;
+	box-sizing: border-box;
+	border: 1px solid black;
+	height: 100%;
+	border-radius: var(--small-rounded-corners);
+	padding: var(--small-gap);
+}
+
+.ix-fact-box-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: var(--small-gap);
+}
+
+.ix-fact-title {
+	font-size: 1.5rem;
+	font-weight: bold;
+	font-family: var(--heading-fonts);
+}
+
+.ix-fact-title::before {
+	content: 'Fact on ';
+	font-style: italic;
+}
+
+.ix-refresh-fact-button {
+	background-color: var(--accent);
+	color: var(--background-primary-color);
+	border: none;
+	outline: none;
+	width: 2rem;
+	height: 2rem;
+	border-radius: var(--small-rounded-corners);
+}
