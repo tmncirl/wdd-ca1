@@ -471,6 +471,11 @@ html:has(.ccp-body), .ccp-body {
 	padding: var(--small-gap) 0;
 }
 
+.wd-section-text {
+	font-weight: bold;
+	font-family: var(--heading-fonts);
+}
+
 .wd-page-description {
 	font-size: 1.5rem;
 	padding-bottom: var(--small-gap);

@@ -34,7 +34,7 @@
                 
 				<!-- Navbar toggler for small screens -->
 				<!-- Adapted from https://getbootstrap.com/docs/5.3/components/navbar/#toggler -->
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
@@ -69,17 +69,20 @@
 		<div class="container-fluid wd-main-content">
 			<div class="row wd-header-row">
 				<div class="col-md-6">
-					<section id="donation-form-section"></section>
+					<section id="donation-form-section">
+						<h2 class="wd-section-text">Donate</h2>
+					</section>
 					<h1 class="wd-page-title">What can we do about it?</h1>
 					<p class="wd-page-description">One thing you can do, is donate to help the fight against climate change, and you can do so right here:</p>
                     
-					<form class="wd-donation-form" action="" onsubmit="handleSubmitDonationForm(event)">
+					<!-- javascript:void(0); prevents page reload -->
+					<form class="wd-donation-form" action="javascript:void(0);" onsubmit="handleSubmitDonationForm(event)">
 						<div class="row wd-donation-form-row">
 							<div class="col-sm-6 wd-donation-inputs-column">
 								<label for="card-number">Card Number</label>
 								<input type="text" name="card-number" id="card-number" placeholder="1234 5678 9012 3456" required>
 
-								<label for="wd-expiry-inputs">Expiry</label>
+								<label for="expiry-month">Expiry</label>
 								<div class="wd-expiry-inputs">
 									<!-- A select gives a list of options for the user -->
 									<select name="expiry-month" id="expiry-month" aria-label="Expiry month">
@@ -128,7 +131,7 @@
 									</select>
 									
 									<!-- Adding an onclick makes a js function run when the button is pressed -->
-									<input type="button" class="wd-randomise-donation-amount" value="🎲" id="randomise-donation-amount" onclick="randomiseDonationAmount()" min="1" step="0.01">
+									<input type="button" class="wd-randomise-donation-amount" value="🎲" id="randomise-donation-amount" onclick="randomiseDonationAmount()">
 								</div>
 
 								<!-- This is hidden by default, and shown when the user selects the custom donation amount option -->
