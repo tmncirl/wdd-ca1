@@ -657,6 +657,7 @@ html:has(.ccp-body), .ccp-body {
 }
 
 .ix-hero-video {
+	background-color: black;
 	filter: blur(5px) brightness(0.5);
 	transform: scale(1.1);
 	object-fit: cover;
@@ -675,11 +676,6 @@ html:has(.ccp-body), .ccp-body {
 	color: var(--primary);
 	width: 100%;
 	text-align: center;
-}
-
-.ix-fact-box-container {
-	box-sizing: border-box;
-	padding: 1rem;
 }
 
 .ix-fact-box {
@@ -717,4 +713,9 @@ html:has(.ccp-body), .ccp-body {
 	width: 2rem;
 	height: 2rem;
 	border-radius: var(--small-rounded-corners);
+}
+
+.ix-page-content > div {
+	box-sizing: border-box;
+	padding: 1rem;
 }
