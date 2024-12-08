@@ -1,5 +1,6 @@
 const customDonationAmountInput = document.getElementById('custom-donation-amount');
 
+// If the select changes to custom, show the custom amount input
 document.getElementById('donation-amount').addEventListener('change', (e) => {
     if (e.target.value === 'custom') {
         showCustomAmountInput();
@@ -93,6 +94,7 @@ function validateEmail(email) {
     - Check for groups of uppercase and lowercase letters, numbers, dots, underscores, pluses, and dashes before the @ symbol
     - Checks for groups of uppercase and lowercase letters, numbers, dots, and dashes after the @ symbol, excluding letters that can't be used in a domain name such as underscore
     - The final part checks for a dot, and any uppercase or lowercase letters after that
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet
     **/
 
     if (emailRegex.test(email)) {
