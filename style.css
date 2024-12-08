@@ -489,6 +489,7 @@ html:has(.ccp-body), .ccp-body {
 	width: 100%;
 	height: 100%;
 	border-radius: var(--small-rounded-corners);
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .wd-main-content {
@@ -515,10 +516,23 @@ html:has(.ccp-body), .ccp-body {
 	font-size: 1.2rem;
 }
 
-.wd-page-content h2 {
-	font-size: 2rem;
+.wd-page-content a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.wd-page-content h1 {
+	font-size: 2.2rem;
 	font-family: var(--heading-fonts);
 	padding-top: var(--small-gap);
+	padding-bottom: var(--small-gap);
+}
+
+.wd-page-content h2 {
+	font-size: 1.8rem;
+	font-family: var(--heading-fonts);
+	padding-top: var(--small-gap);
+	padding-bottom: var(--small-gap);
 }
 
 .wd-page-content ul {
@@ -528,7 +542,12 @@ html:has(.ccp-body), .ccp-body {
 }
 
 .wd-page-content ul li {
-	margin-bottom: var(--small-gap);
+	margin-bottom: 1rem;
+}
+
+.wd-page-content ul li b {
+	font-family: var(--heading-fonts);
+	font-size: 1.25rem;
 }
 
 .wd-donation-form label {
