@@ -52,7 +52,7 @@ table {
 /* Colour variables in root selector, allows for easy changing of the websites colours on all pages */
 
 :root {
-	--primary: #ffffff; /* White */
+	--primary: #e0e0e0; /* White */
 	--secondary: #e6e3e3; /* Light gray */
 	--accent: #5B92E5 ; /* Blue */
 	--background-primary-color: #EEEEEE;
@@ -61,6 +61,11 @@ table {
 	/* Fallback fonts after google font if it doesn't load */
 	--heading-fonts: 'Work Sans', 'Roboto', sans-serif;
 	--body-fonts: 'Merriweather', Arial, Helvetica, sans-serif;
+}
+
+body {
+	background-color: var(--primary);
+	/* TODO: Organise this and the css reset */
 }
 
 /* Consequences page, done by Alex Daly */
@@ -410,6 +415,16 @@ html:has(.ccp-body), .ccp-body {
 	.nav-item {
 		padding-right: 0 !important;
 	}
+
+	.wd-main-content {
+		width: 99vw !important;
+	}
+
+	.wd-image-grid {
+		padding-top: 1rem;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	}
 }	
 
 .navbar {
@@ -442,6 +457,10 @@ html:has(.ccp-body), .ccp-body {
 	margin: 0.5rem 0;
 }
 
+.wd-header-row {
+	padding: 1rem !important;
+}
+
 .wd-page-title {
 	font-size: 3rem;
 	font-family: var(--heading-fonts);
@@ -458,10 +477,11 @@ html:has(.ccp-body), .ccp-body {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-gap: var(--image-grid-gap);
+	padding-right: 0 !important;
 }
 
 .wd-image-grid .wd-grid-item {
-	aspect-ratio: 5/4;
+	aspect-ratio: 1/1;
 }
 
 .wd-image-grid .wd-grid-item img {
@@ -472,7 +492,19 @@ html:has(.ccp-body), .ccp-body {
 }
 
 .wd-main-content {
-	width: 85vw;
+	width: 90vw;
+}
+
+/* Made with the help of
+   https://neumorphism.io/ */
+.wd-main-content > div.row {
+	border-radius: 25px;
+	background: #e0e0e0;
+	box-shadow:  20px 20px 60px #bebebe,
+				-20px -20px 60px #ffffff;
+	box-sizing: border-box;
+	padding: 1rem;
+	margin: 2rem 0;
 }
 
 .wd-page-content {
@@ -581,6 +613,7 @@ html:has(.ccp-body), .ccp-body {
 
 .wd-custom-donation-amount {
 	display: none;
+	margin-top: 1ch;
 }
 
 .wd-custom-donation-amount.shown {
