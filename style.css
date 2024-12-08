@@ -65,8 +65,11 @@ table {
 
 body {
 	background-color: var(--primary);
-	/* TODO: Organise this and the css reset */
 }
+
+/* --------- */
+/* Alex Daly */
+/* --------- */
 
 /* Consequences page, done by Alex Daly */
 
@@ -385,11 +388,11 @@ html:has(.ccp-body), .ccp-body {
 
 /* End of Current Climate Change Prevention Page */
 
-/* ------ */
-/* Thomas */
-/* ------ */
+/* ----------------- */
+/* Thomas Malinovsky */
+/* ----------------- */
 
-/* Shared CSS for all pages */
+/* Shared CSS for all my pages + shared navbar */
 :root {
 	--small-rounded-corners: 0.5rem;
 	--small-gap: 0.5rem;
@@ -582,6 +585,10 @@ html:has(.ccp-body), .ccp-body {
 	box-shadow: 0 0 5px var(--accent);
 }
 
+/* :user-invalid is a relatively new selector that means inputs that aren't valid but the user has interacted with them
+   this differs from :invalid which checks if an input is invalid right after the page is loaded, which makes the inputs look ugly
+   it is majorly supported though. https://developer.mozilla.org/en-US/docs/Web/CSS/:user-invalid
+*/
 .wd-donation-form input:user-invalid,
 .wd-donation-form button:user-invalid,
 .wd-donation-form select:user-invalid {
@@ -719,3 +726,5 @@ html:has(.ccp-body), .ccp-body {
 	box-sizing: border-box;
 	padding: 1rem;
 }
+
+/* End of Index/Home */

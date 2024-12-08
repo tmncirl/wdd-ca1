@@ -1,3 +1,4 @@
+// Query selector grabs an element like you would in CSS
 const largeTextElem = document.querySelector('.ix-hero-text');
 const heroVideoElem = document.querySelector('.ix-hero-video');
 
@@ -17,6 +18,7 @@ const factRefreshButton = document.querySelector('.ix-refresh-fact-button');
 const factTitleElem = document.querySelector('.ix-fact-title');
 const factBodyElem = document.querySelector('.ix-fact-body');
 
+// Use of JS Arrays
 const facts = [
     {
         title: 'Sea level rise',
@@ -44,6 +46,7 @@ factRefreshButton.addEventListener('click', () => giveRandomFact());
 
 // Manipulation of DOM #1
 function giveRandomFact() {
+    // Use of JS randomisation
     const randomFact = facts[Math.floor(Math.random() * facts.length)];
 
     // To make sure we do not show the same fact and make it look like it didnt do anything
@@ -56,4 +59,5 @@ function giveRandomFact() {
     factBodyElem.textContent = randomFact.body;
 }
 
+// So we load a fact right after the page is loaded
 giveRandomFact();
