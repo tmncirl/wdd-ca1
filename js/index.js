@@ -17,6 +17,7 @@ const factRefreshButton = document.querySelector('.ix-refresh-fact-button');
 
 const factTitleElem = document.querySelector('.ix-fact-title');
 const factBodyElem = document.querySelector('.ix-fact-body');
+const factSourceElem = document.querySelector('.ix-fact-source');
 
 // Use of JS Arrays
 const facts = [
@@ -57,6 +58,7 @@ function giveRandomFact() {
 
     factTitleElem.textContent = randomFact.title;
     factBodyElem.textContent = randomFact.body;
+    factSourceElem.href = randomFact.source;
 }
 
 // So we load a fact right after the page is loaded

@@ -712,6 +712,10 @@ html:has(.ccp-body), .ccp-body {
 	font-style: italic;
 }
 
+.ix-fact-body {
+	padding-bottom: var(--small-gap);
+}
+
 .ix-refresh-fact-button {
 	background-color: var(--accent);
 	color: var(--background-primary-color);
@@ -725,6 +729,11 @@ html:has(.ccp-body), .ccp-body {
 .ix-page-content > div {
 	box-sizing: border-box;
 	padding: 1rem;
+}
+
+.ix-fact-source {
+	text-decoration: none;
+	font-weight: bold;
 }
 
 /* End of Index/Home */
